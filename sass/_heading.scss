@@ -1,0 +1,22 @@
+.heading {
+    font-size: 38px;
+    line-height: 48px;
+    font-weight: 700;
+    color: $text_color;
+    text-transform: uppercase;
+
+    @media (min-width: 979px) {
+        font-size: 48px;
+        line-height: 58px;
+    }
+    
+    &:after {
+        content: "";
+        max-width: 362px;
+        width: 100%;
+        background-color: $primary_color;
+        height: 4px;
+        display: block;
+        margin-top: 7px;
+    }
+}

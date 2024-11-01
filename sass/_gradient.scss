@@ -1,0 +1,9 @@
+.gradient {
+    background: rgb(167,167,172);
+    background: -moz-radial-gradient(circle, rgba(167,167,172,0.13) 0%, rgba(29,29,53,0.09) 100%);
+    background: -webkit-radial-gradient(circle, rgba(167,167,172,0.13) 0%, rgba(29,29,53,0.09) 100%);
+    background: radial-gradient(circle, rgba(167,167,172,0.13) 0%, rgba(29,29,53,0.09) 100%);
+    -webkit-box-shadow: 8px 8px 30px 5px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 8px 8px 30px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 8px 8px 30px 5px rgba(0, 0, 0, 0.5);
+}

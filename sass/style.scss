@@ -6,10 +6,22 @@
 }
 
 .container {
-    max-width: 1110px;
+    max-width: 1746px;
     padding: 0px 15px;
     margin: 0 auto;
 }
 
+.d-none {
+    display: none;
+}
+
+body {
+    position: relative;
+}
+
 @import "variables";
 @import "fonts";
+@import "blocks/main";
+@import "heading";
+@import "buttons";
+@import "gradient";
