@@ -203,6 +203,9 @@ body {
   outline: none;
   border-color: #FF5F13;
 }
+.calculator__input input.error:focus {
+  border-color: #FF0000;
+}
 .calculator__title {
   font-size: 24px;
   text-decoration: underline;

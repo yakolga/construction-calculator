@@ -184,6 +184,12 @@
                 outline: none;
                 border-color: $primary_color;
             }
+
+            &.error {
+                &:focus {
+                    border-color: $error_color;
+                }
+            }
         }
     }
 
