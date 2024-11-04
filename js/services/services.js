@@ -1,16 +1,20 @@
-const postData = async (url, data) => {
-    const res = await fetch(url, {
-        method: "POST",
+async function updateOperationCount(id, newCount, endpoint, element) {
+    const response = await fetch(`${endpoint}/${id}`, {
+        method: 'PATCH',
         headers: {
-            'Content-type': 'application/json'
+            'Content-Type': 'application/json',
         },
-        body: data
+        body: JSON.stringify({ count: newCount }),
     });
 
-    return await res.json();
+    if (response.ok) {
+        element.placeholder = newCount;
+    } else {
+        console.error('Ошибка при обновлении:', response.statusText);
+    }
 };
 
-export {postData};
+export {updateOperationCount};
 
 const getData = async (url) => {
     const res = await fetch(url);

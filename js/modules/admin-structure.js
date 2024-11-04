@@ -1,7 +1,6 @@
 import { getData } from "../services/services";
 
-function worksStructure() {
-    if (!document.querySelector('.calculator__main')) return false
+function adminStructure() {
     class worksElement {
         constructor(name, count, unit, id, i, parentSelector) {
             this.name = name;
@@ -14,21 +13,16 @@ function worksStructure() {
 
         render() {
             if (!this.parent) return false
-            
+    
             const element = document.createElement('div');
             element.classList.add('calculator__block');
             element.id = this.id;
 
             element.innerHTML = `
-                <label for="${this.id}-${this.i}" class="calculator__name">
-                    ${this.name}
-                    <span class="calculator__price_unit">
-                        <span class="calculator__price-price"> ${this.count}</span>
-                        <span class="calculator__price-unit">${this.unit}</span>
-                    </span>
-                </label>
+                <span class="calculator__name">${this.name}</span>
                 <div class="calculator__input">
-                    <input type="checkbox" id="${this.id}-${this.i}">
+                    <input type="text" placeholder="${this.count}">
+                    <span class="calculator__unit">${this.unit}</span>
                 </div>
             `;
 
@@ -39,9 +33,9 @@ function worksStructure() {
     getData('http://localhost:3000/operations')
         .then(data => {
             data.forEach(({name, count, unit, id}, i) => {
-                new worksElement(name, count, unit, id, i, '.calculator__calculations.--works .calculator__blocks').render();
+                new worksElement(name, count, unit, id, i, '.calculator__calculations.--admin .calculator__blocks').render();
             });
         });
 }
 
-export default worksStructure;
+export default adminStructure;

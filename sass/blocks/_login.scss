@@ -1,0 +1,64 @@
+.calculator {
+    &__login {
+        margin: 0 auto;
+        margin-top: 50px;
+        @media (min-width: 1200px) {
+            margin-top: 100px;
+        }
+    }
+
+    &__subheading {
+        font-size: 40px;
+        line-height: 48px;
+        color: $text_color;
+        text-align: center;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 60px 62px 65px;
+        text-align: center;
+        max-width: 450px;
+        margin: 0 auto;
+        margin-top: 50px;
+
+        label:not(:last-child) {
+            margin-bottom: 30px;
+        }
+        
+        input {
+            display: block;
+            margin-top: 30px;
+            padding: 8px 20px;
+            border: 1px solid $text_color;
+            border-radius: 4px;
+
+            &.error {
+                border: 1px solid $error_color;
+            }
+        }
+
+        label {
+            display: block;
+            font-size: 24px;
+            color: $text_color;
+        }
+    }
+
+    &__message {
+        font-size: 18px;
+        color: $error_color;
+        padding-bottom: 24px;
+    }
+
+    &__button {
+        font-size: 24px;
+        padding: 8px;
+        min-width: 185px;
+        border-radius: 4px;
+        border: none;
+        cursor: pointer;
+    }
+}

@@ -1,12 +1,14 @@
 import {getData} from '../services/services';
 
-function calculator(uahSelector, usdSelector) {
+function calculator(parentSelector) {
+    if (!document.querySelector(parentSelector)) return false
+
     const uahResult = document.querySelector('.--uah .calculator__price span'),
         usdResult = document.querySelector('.--usd .calculator__price span');
 
     let squares = 0, ceilingHeight = 0, bathroomSquare = 0;
 
-    document.querySelector('.calculator__main').addEventListener('input', (e) => {
+    document.querySelector(parentSelector).addEventListener('input', (e) => {
         const target = e.target;
 
         if (target.value < 0 && target.closest('.--square')) {
@@ -21,8 +23,6 @@ function calculator(uahSelector, usdSelector) {
             squares = Array.from(allSquareInputs).reduce((sum, input) => {
                 return sum + (parseFloat(input.value) || 0);
             }, 0);
-
-            console.log(squares);
         }
 
         function calculate() {

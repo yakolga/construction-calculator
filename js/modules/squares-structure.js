@@ -10,6 +10,7 @@ function squaresStructure() {
         }
 
         render() {
+            if (!this.parent) return false
             const element = document.createElement('div');
             element.classList.add('calculator__block');
             element.id = this.id;
@@ -28,7 +29,6 @@ function squaresStructure() {
 
     getData("http://localhost:3000/squares")
         .then(data => {
-            console.log(data);
             data.forEach(({name, value, id}) => {
                 new squaresElement(name, value, id, '.calculator__calculations.--square .calculator__blocks').render();
             });
