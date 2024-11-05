@@ -17,5 +17,5 @@ window.addEventListener('DOMContentLoaded', () => {
     logIn('.calculator__form', '#login', '#password', '.calculator__message', 'error');
     logedIn();
     adminStructure();
-    adminPost('.--admin .calculator__blocks', '.calculator__block', 'http://localhost:3000/operations');
+    adminPost('.--admin .calculator__blocks', '.calculator__block', 'https://construction-calculator.onrender.com/operations');
 });
