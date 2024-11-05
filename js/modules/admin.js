@@ -26,7 +26,7 @@ function logIn(formSelector, loginInputSelector, passwordInputSelector, messageC
 
     form.addEventListener('submit', (e) => {
         e.preventDefault();
-        getData('http://localhost:3000/admin')
+        getData('https://construction-calculator.onrender.com/admin')
             .then(data => {
                 if (loginInput.value == data.login && passwordInput.value == data.password) {
                     window.location = '/construction-calculator/admin.html';

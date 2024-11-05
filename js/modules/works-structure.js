@@ -14,7 +14,7 @@ function worksStructure() {
 
         render() {
             if (!this.parent) return false
-            
+
             const element = document.createElement('div');
             element.classList.add('calculator__block');
             element.id = this.id;
@@ -36,7 +36,7 @@ function worksStructure() {
         }
     }
 
-    getData('http://localhost:3000/operations')
+    getData('https://construction-calculator.onrender.com/operations')
         .then(data => {
             data.forEach(({name, count, unit, id}, i) => {
                 new worksElement(name, count, unit, id, i, '.calculator__calculations.--works .calculator__blocks').render();
