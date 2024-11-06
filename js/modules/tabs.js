@@ -2,9 +2,9 @@ function tabs(tabButtonSelector, tabContentSelector, activeClass) {
     const tabButtons = document.querySelectorAll(tabButtonSelector),
         tabContent = document.querySelectorAll(tabContentSelector);
 
-    tabButtons.forEach(button => {
+    tabButtons.forEach((button, _, btns) => {
         button.addEventListener("click", (e) => {
-            tabButtons.forEach(btn => {
+            btns.forEach(btn => {
                 btn.classList.remove(activeClass);
             });
 

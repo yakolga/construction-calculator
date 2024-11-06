@@ -39,7 +39,7 @@ function worksStructure() {
     getData('https://construction-calculator.onrender.com/operations')
         .then(data => {
             data.forEach(({name, count, unit, id}, i) => {
-                new worksElement(name, count, unit, id, i, '.calculator__calculations.--works .calculator__blocks').render();
+                new worksElement(name, count, unit, id, i, '.calculator__calculations--works .calculator__blocks').render();
             });
         });
 }

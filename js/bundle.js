@@ -18,6 +18,10 @@ __webpack_require__.r(__webpack_exports__);
 function adminPost(parentSelector, elementSelector, endpoint) {
     if (!document.querySelector(parentSelector)) return false
 
+    document.querySelector(parentSelector).addEventListener('input', (e) => {
+        e.target.value = e.target.value.replace(/[^0-9]/, '');
+    });
+
     document.querySelector(parentSelector).addEventListener('blur', (e) => {
         if (e.target.tagName === 'INPUT') {
             let inputValue = e.target.value;
@@ -79,7 +83,7 @@ function adminStructure() {
     (0,_services_services__WEBPACK_IMPORTED_MODULE_0__.getData)('https://construction-calculator.onrender.com/operations')
         .then(data => {
             data.forEach(({name, count, unit, id}, i) => {
-                new worksElement(name, count, unit, id, i, '.calculator__calculations.--admin .calculator__blocks').render();
+                new worksElement(name, count, unit, id, i, '.calculator__calculations--admin .calculator__blocks').render();
             });
         });
 }
@@ -169,23 +173,25 @@ __webpack_require__.r(__webpack_exports__);
 function calculator(parentSelector) {
     if (!document.querySelector(parentSelector)) return false
 
-    const uahResult = document.querySelector('.--uah .calculator__price span'),
-        usdResult = document.querySelector('.--usd .calculator__price span');
+    const uahResult = document.querySelector('.calculator__calculations--uah .calculator__price span'),
+        usdResult = document.querySelector('.calculator__calculations--usd .calculator__price span');
 
     let squares = 0, ceilingHeight = 0, bathroomSquare = 0;
 
     document.querySelector(parentSelector).addEventListener('input', (e) => {
         const target = e.target;
 
-        if (target.value < 0 && target.closest('.--square')) {
+        if (target.value < 0 && target.closest('.calculator__calculations--square')) {
             target.classList.add('error');
             target.value = 0;
         } else {
             target.classList.remove('error');
         }
 
+        target.value = target.value.replace(/[^0-9]/, '');
+
         function getSquares() {
-            const allSquareInputs = document.querySelectorAll('.--square .calculator__blocks input');
+            const allSquareInputs = document.querySelectorAll('.calculator__calculations--square .calculator__blocks input');
             squares = Array.from(allSquareInputs).reduce((sum, input) => {
                 return sum + (parseFloat(input.value) || 0);
             }, 0);
@@ -194,7 +200,7 @@ function calculator(parentSelector) {
         function calculate() {
             let result = 0;
 
-            if (target.closest('.--square') && target.value >= 0 && !target.closest('.calculator__block_ceiling')) {
+            if (target.closest('.calculator__calculations--square') && target.value >= 0 && !target.closest('.calculator__block_ceiling')) {
                 getSquares();
             }
 
@@ -226,7 +232,7 @@ function calculator(parentSelector) {
                     result += bathroomSquare * price;
                 } else if (checkbox.closest('#plumbing-installation') || checkbox.closest('#electrics') || checkbox.closest('#entrance-door')) {
                     result += price;
-                } else if (checkbox.closest('.--works')) {
+                } else if (checkbox.closest('.calculator__calculations--works')) {
                     result += squares * price;
                 }
             });
@@ -342,7 +348,7 @@ function squaresStructure() {
     (0,_services_services__WEBPACK_IMPORTED_MODULE_0__.getData)("https://construction-calculator.onrender.com/squares")
         .then(data => {
             data.forEach(({name, value, id}) => {
-                new squaresElement(name, value, id, '.calculator__calculations.--square .calculator__blocks').render();
+                new squaresElement(name, value, id, '.calculator__calculations--square .calculator__blocks').render();
             });
         });
 }
@@ -365,9 +371,9 @@ function tabs(tabButtonSelector, tabContentSelector, activeClass) {
     const tabButtons = document.querySelectorAll(tabButtonSelector),
         tabContent = document.querySelectorAll(tabContentSelector);
 
-    tabButtons.forEach(button => {
+    tabButtons.forEach((button, _, btns) => {
         button.addEventListener("click", (e) => {
-            tabButtons.forEach(btn => {
+            btns.forEach(btn => {
                 btn.classList.remove(activeClass);
             });
 
@@ -441,7 +447,7 @@ function worksStructure() {
     (0,_services_services__WEBPACK_IMPORTED_MODULE_0__.getData)('https://construction-calculator.onrender.com/operations')
         .then(data => {
             data.forEach(({name, count, unit, id}, i) => {
-                new worksElement(name, count, unit, id, i, '.calculator__calculations.--works .calculator__blocks').render();
+                new worksElement(name, count, unit, id, i, '.calculator__calculations--works .calculator__blocks').render();
             });
         });
 }
@@ -583,7 +589,7 @@ window.addEventListener('DOMContentLoaded', () => {
     (0,_modules_admin__WEBPACK_IMPORTED_MODULE_4__["default"])('.calculator__form', '#login', '#password', '.calculator__message', 'error');
     (0,_modules_logedIn__WEBPACK_IMPORTED_MODULE_5__["default"])();
     (0,_modules_admin_structure__WEBPACK_IMPORTED_MODULE_6__["default"])();
-    (0,_modules_admin_post__WEBPACK_IMPORTED_MODULE_7__["default"])('.--admin .calculator__blocks', '.calculator__block', 'https://construction-calculator.onrender.com/operations');
+    (0,_modules_admin_post__WEBPACK_IMPORTED_MODULE_7__["default"])('.calculator__calculations--admin .calculator__blocks', '.calculator__block', 'https://construction-calculator.onrender.com/operations');
 });
 })();
 

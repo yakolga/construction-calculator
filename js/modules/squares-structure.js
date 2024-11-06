@@ -30,7 +30,7 @@ function squaresStructure() {
     getData("https://construction-calculator.onrender.com/squares")
         .then(data => {
             data.forEach(({name, value, id}) => {
-                new squaresElement(name, value, id, '.calculator__calculations.--square .calculator__blocks').render();
+                new squaresElement(name, value, id, '.calculator__calculations--square .calculator__blocks').render();
             });
         });
 }

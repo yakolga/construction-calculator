@@ -3,23 +3,25 @@ import {getData} from '../services/services';
 function calculator(parentSelector) {
     if (!document.querySelector(parentSelector)) return false
 
-    const uahResult = document.querySelector('.--uah .calculator__price span'),
-        usdResult = document.querySelector('.--usd .calculator__price span');
+    const uahResult = document.querySelector('.calculator__calculations--uah .calculator__price span'),
+        usdResult = document.querySelector('.calculator__calculations--usd .calculator__price span');
 
     let squares = 0, ceilingHeight = 0, bathroomSquare = 0;
 
     document.querySelector(parentSelector).addEventListener('input', (e) => {
         const target = e.target;
 
-        if (target.value < 0 && target.closest('.--square')) {
+        if (target.value < 0 && target.closest('.calculator__calculations--square')) {
             target.classList.add('error');
             target.value = 0;
         } else {
             target.classList.remove('error');
         }
 
+        target.value = target.value.replace(/[^0-9]/, '');
+
         function getSquares() {
-            const allSquareInputs = document.querySelectorAll('.--square .calculator__blocks input');
+            const allSquareInputs = document.querySelectorAll('.calculator__calculations--square .calculator__blocks input');
             squares = Array.from(allSquareInputs).reduce((sum, input) => {
                 return sum + (parseFloat(input.value) || 0);
             }, 0);
@@ -28,7 +30,7 @@ function calculator(parentSelector) {
         function calculate() {
             let result = 0;
 
-            if (target.closest('.--square') && target.value >= 0 && !target.closest('.calculator__block_ceiling')) {
+            if (target.closest('.calculator__calculations--square') && target.value >= 0 && !target.closest('.calculator__block_ceiling')) {
                 getSquares();
             }
 
@@ -60,7 +62,7 @@ function calculator(parentSelector) {
                     result += bathroomSquare * price;
                 } else if (checkbox.closest('#plumbing-installation') || checkbox.closest('#electrics') || checkbox.closest('#entrance-door')) {
                     result += price;
-                } else if (checkbox.closest('.--works')) {
+                } else if (checkbox.closest('.calculator__calculations--works')) {
                     result += squares * price;
                 }
             });
