@@ -1,198 +1,200 @@
 {
   "squares": [
     {
-      "name": "Гостинная",
+      "name": "Living Room",
       "value": 0,
       "id": "living_room"
     },
     {
-      "name": "Коридор №2",
+      "name": "Corridor #2",
       "value": 0,
       "id": "corridor_2"
     },
     {
-      "name": "Гостинная с кухней (студия)",
+      "name": "Living Room with Kitchen (Studio)",
       "value": 0,
       "id": "studio"
     },
     {
-      "name": "Кухня",
+      "name": "Kitchen",
       "value": 0,
       "id": "kitchen"
     },
     {
-      "name": "Спальня №1",
+      "name": "Bedroom #1",
       "value": 0,
       "id": "bedroom_1"
     },
     {
-      "name": "Кладовая",
+      "name": "Storeroom",
       "value": 0,
       "id": "storeroom"
     },
     {
-      "name": "Спальня №2",
+      "name": "Bedroom #2",
       "value": 0,
       "id": "bedroom_2"
     },
     {
-      "name": "Балкон №1",
+      "name": "Balcony #1",
       "value": 0,
       "id": "balcony_1"
     },
     {
-      "name": "Детская №1",
+      "name": "Children's Room #1",
       "value": 0,
       "id": "childrensroom_1"
     },
     {
-      "name": "Балкон №2",
+      "name": "Balcony #2",
       "value": 0,
       "id": "balcony_2"
     },
     {
-      "name": "Детская №2",
+      "name": "Children's Room #2",
       "value": 0,
       "id": "childrensroom_2"
     },
     {
-      "name": "Лоджия",
+      "name": "Loggia",
       "value": 0,
       "id": "loggia_2"
     },
     {
-      "name": "Кабинет",
+      "name": "Office",
       "value": 0,
       "id": "cabinet_2"
     },
     {
-      "name": "Санузел (ванная или душ)",
+      "name": "Bathroom (Shower or Bathtub)",
       "value": 0,
       "id": "bathroom"
     },
     {
-      "name": "Коридор №1",
+      "name": "Corridor #1",
       "value": 0,
       "id": "corridor_1"
     },
     {
-      "name": "Санузел (туалет)",
+      "name": "Bathroom (Toilet)",
       "value": 0,
       "id": "toilet"
     }
   ],
   "operations": [
     {
-      "name": "Демонтаж, зачистка старой отделки",
+      "name": "Demolition, Removal of Old Finishes",
       "count": "20",
-      "unit": "грн/м²",
+      "unit": "UAH/m²",
       "id": "destruction"
     },
     {
-      "name": "Откосы оконные",
+      "name": "Window Slopes",
       "count": "40",
-      "unit": "грн/м²",
+      "unit": "UAH/m²",
       "id": "windows"
     },
     {
-      "name": "Штукатурка стен",
+      "name": "Wall Plastering",
       "count": "20",
-      "unit": "грн/м²",
+      "unit": "UAH/m²",
       "id": "plastering"
     },
     {
-      "name": "Стяжка пола",
+      "name": "Floor Screed",
       "count": "10",
-      "unit": "грн/м²",
+      "unit": "UAH/m²",
       "id": "floor_screed"
     },
     {
-      "name": "Шпаклевка стен",
+      "name": "Wall Putty",
       "count": "20",
-      "unit": "грн/м²",
+      "unit": "UAH/m²",
       "id": "wall_putty"
     },
     {
-      "name": "Укладка ламината",
+      "name": "Laminate Installation",
       "count": "20",
-      "unit": "грн/м²",
+      "unit": "UAH/m²",
       "id": "laminate"
     },
     {
-      "name": "Поклейка обоев",
+      "name": "Wallpapering",
       "count": "30",
-      "unit": "грн/м²",
+      "unit": "UAH/m²",
       "id": "wallpapering"
     },
     {
-      "name": "Установка плинтуса на пол",
+      "name": "Floor Skirting Installation",
       "count": "20",
-      "unit": "грн/м²",
+      "unit": "UAH/m²",
       "id": "skirting-board"
     },
     {
-      "name": "Покраска стен",
+      "name": "Wall Painting",
       "count": "20",
-      "unit": "грн/м²",
+      "unit": "UAH/m²",
       "id": "walls-painting"
     },
     {
-      "name": "Плитка санузлы, пол кухни, коридор",
+      "name": "Tile Installation in Bathrooms, Kitchen Floor, Corridor",
       "count": "20",
-      "unit": "грн/м²",
+      "unit": "UAH/m²",
       "id": "bathrooms-kitchenfloor-halfway"
     },
     {
-      "name": "Натяжной / гипсокартонный потолок",
+      "name": "Stretch/Plasterboard Ceiling",
       "count": "100",
-      "unit": "грн/м²",
+      "unit": "UAH/m²",
       "id": "stretch-plasterboard-ceiling"
     },
     {
-      "name": "Разводка, установка сантехники",
+      "name": "Plumbing Installation",
       "count": "30000",
-      "unit": "грн",
+      "unit": "UAH",
       "id": "plumbing-installation"
     },
     {
-      "name": "Покраска потолка",
+      "name": "Ceiling Painting",
       "count": "20",
-      "unit": "грн/м²",
+      "unit": "UAH/m²",
       "id": "ceiling-painting"
     },
     {
-      "name": "Электрика: розетки, выключ., свет",
+      "name": "Electrical Work: Outlets, Switches, Lighting",
       "count": "40000",
-      "unit": "грн",
+      "unit": "UAH",
       "id": "electrics"
     },
     {
-      "name": "Шпаклевка потолка",
+      "name": "Ceiling Putty",
       "count": "20",
-      "unit": "грн/м²",
+      "unit": "UAH/m²",
       "id": "ceiling-putty"
     },
     {
-      "name": "Вставка межкомнатных дверей",
+      "name": "Interior Door Installation",
       "count": "10000",
-      "unit": "грн/шт/25м²",
+      "unit": "UAH/unit/25m²",
       "id": "inserting-doors"
     },
     {
-      "name": "Плинтус потолочный",
+      "name": "Ceiling Plinth",
       "count": "10",
-      "unit": "грн/м",
+      "unit": "UAH/m",
       "id": "ceiling-plinth"
     },
     {
-      "name": "Вставка входной двери",
+      "name": "Entrance Door Installation",
       "count": "10000",
-      "unit": "грн/шт",
+      "unit": "UAH/unit",
       "id": "entrance-door"
     }
   ],
-  "admin": {
-    "login": "root",
-    "password": "password"
-  }
+  "admin": [
+    {
+      "login": "root",
+      "password": "password"
+    }
+  ]
 }
