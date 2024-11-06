@@ -1,0 +1,200 @@
+{
+  "squares": [
+    {
+      "name": "Living Room",
+      "value": 0,
+      "id": "living_room"
+    },
+    {
+      "name": "Corridor #2",
+      "value": 0,
+      "id": "corridor_2"
+    },
+    {
+      "name": "Living Room with Kitchen (Studio)",
+      "value": 0,
+      "id": "studio"
+    },
+    {
+      "name": "Kitchen",
+      "value": 0,
+      "id": "kitchen"
+    },
+    {
+      "name": "Bedroom #1",
+      "value": 0,
+      "id": "bedroom_1"
+    },
+    {
+      "name": "Storeroom",
+      "value": 0,
+      "id": "storeroom"
+    },
+    {
+      "name": "Bedroom #2",
+      "value": 0,
+      "id": "bedroom_2"
+    },
+    {
+      "name": "Balcony #1",
+      "value": 0,
+      "id": "balcony_1"
+    },
+    {
+      "name": "Children's Room #1",
+      "value": 0,
+      "id": "childrensroom_1"
+    },
+    {
+      "name": "Balcony #2",
+      "value": 0,
+      "id": "balcony_2"
+    },
+    {
+      "name": "Children's Room #2",
+      "value": 0,
+      "id": "childrensroom_2"
+    },
+    {
+      "name": "Loggia",
+      "value": 0,
+      "id": "loggia_2"
+    },
+    {
+      "name": "Office",
+      "value": 0,
+      "id": "cabinet_2"
+    },
+    {
+      "name": "Bathroom (Shower or Bathtub)",
+      "value": 0,
+      "id": "bathroom"
+    },
+    {
+      "name": "Corridor #1",
+      "value": 0,
+      "id": "corridor_1"
+    },
+    {
+      "name": "Bathroom (Toilet)",
+      "value": 0,
+      "id": "toilet"
+    }
+  ],
+  "operations": [
+    {
+      "name": "Demolition, Removal of Old Finishes",
+      "count": "20",
+      "unit": "UAH/m²",
+      "id": "destruction"
+    },
+    {
+      "name": "Window Slopes",
+      "count": "40",
+      "unit": "UAH/m²",
+      "id": "windows"
+    },
+    {
+      "name": "Wall Plastering",
+      "count": "20",
+      "unit": "UAH/m²",
+      "id": "plastering"
+    },
+    {
+      "name": "Floor Screed",
+      "count": "10",
+      "unit": "UAH/m²",
+      "id": "floor_screed"
+    },
+    {
+      "name": "Wall Putty",
+      "count": "20",
+      "unit": "UAH/m²",
+      "id": "wall_putty"
+    },
+    {
+      "name": "Laminate Installation",
+      "count": "20",
+      "unit": "UAH/m²",
+      "id": "laminate"
+    },
+    {
+      "name": "Wallpapering",
+      "count": "30",
+      "unit": "UAH/m²",
+      "id": "wallpapering"
+    },
+    {
+      "name": "Floor Skirting Installation",
+      "count": "20",
+      "unit": "UAH/m²",
+      "id": "skirting-board"
+    },
+    {
+      "name": "Wall Painting",
+      "count": "20",
+      "unit": "UAH/m²",
+      "id": "walls-painting"
+    },
+    {
+      "name": "Tile Installation in Bathrooms, Kitchen Floor, Corridor",
+      "count": "20",
+      "unit": "UAH/m²",
+      "id": "bathrooms-kitchenfloor-halfway"
+    },
+    {
+      "name": "Stretch/Plasterboard Ceiling",
+      "count": "100",
+      "unit": "UAH/m²",
+      "id": "stretch-plasterboard-ceiling"
+    },
+    {
+      "name": "Plumbing Installation",
+      "count": "30000",
+      "unit": "UAH",
+      "id": "plumbing-installation"
+    },
+    {
+      "name": "Ceiling Painting",
+      "count": "20",
+      "unit": "UAH/m²",
+      "id": "ceiling-painting"
+    },
+    {
+      "name": "Electrical Work: Outlets, Switches, Lighting",
+      "count": "40000",
+      "unit": "UAH",
+      "id": "electrics"
+    },
+    {
+      "name": "Ceiling Putty",
+      "count": "20",
+      "unit": "UAH/m²",
+      "id": "ceiling-putty"
+    },
+    {
+      "name": "Interior Door Installation",
+      "count": "10000",
+      "unit": "UAH/unit/25m²",
+      "id": "inserting-doors"
+    },
+    {
+      "name": "Ceiling Plinth",
+      "count": "10",
+      "unit": "UAH/m",
+      "id": "ceiling-plinth"
+    },
+    {
+      "name": "Entrance Door Installation",
+      "count": "10000",
+      "unit": "UAH/unit",
+      "id": "entrance-door"
+    }
+  ],
+  "admin": [
+    {
+      "login": "root",
+      "password": "password"
+    }
+  ]
+}

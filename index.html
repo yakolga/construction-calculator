@@ -1,13 +1,87 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Калькулятор стоимости ремонта</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Repair Cost Calculator</title>
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="apple-touch-icon" sizes="57x57" href="icons/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="icons/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="icons/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="icons/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="icons/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="icons/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="icons/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="icons/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="icons/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="icons/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon/favicon-16x16.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="icons/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
 </head>
 <body>
-    <div class="container"></div>
-    <script src="js/script.js"></script>
+    <div class="calculator container">
+        <h1 class="calculator__heading heading">Repair Cost Calculator</h1>
+        <div class="calculator__layout">
+            <div class="calculator__left">
+                <section class="calculator__main">
+                    <div class="calculator__tabs">
+                        <div class="calculator__tab calculator__tab-active" data-name="square">Area of ​​the premises</div>
+                        <div class="calculator__tab" data-name="works">Necessary works</div>
+                    </div>
+                    <div class="calculator__calculations calculator__calculations--square gradient" data-name="square">
+                        <div class="calculator__block calculator__block_ceiling">
+                            <span class="calculator__name">Ceiling height in the apartment:</span>
+                            <div class="calculator__input">
+                                <input type="text" placeholder="0.00">
+                                <span class="calculator__unit">м</span>
+                            </div>
+                        </div>
+        
+                        <div class="calculator__title">Area of ​​individual rooms:</div>
+                        <div class="calculator__blocks"></div>
+                        <div class="calculator__info">
+                            <span class="calculator__label">Notes:</span>
+                            <ul class="calculator__list">
+                                <li>establish the area of ​​the premises where repairs are needed</li>
+                                <li>if there are additional rooms, for example, Bedroom #3, then add their area to the existing ones in the calculator</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="calculator__calculations calculator__calculations--works gradient d-none" data-name="works">
+                        <div class="calculator__title">Name of the required work:</div>
+                        <div class="calculator__blocks"></div>
+                        <div class="calculator__info">
+                            <span class="calculator__label">Notes:</span>
+                            <ul class="calculator__list">
+                                <li>check the box next to the service if it is necessary</li>
+                                <li>next to the service is the <span>average</span> cost at the current moment. This includes work and
+                                    material. This may be the cost per square or linear meter, the average cost of
+                                    all plumbing for repairs, etc. The final version may differ from the materials you
+                                    selected, but the calculator will give you an idea of ​​the cost of average quality repairs.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <a href="login.html" class="calculator__log button">Login as administrator</a>
+            </div>
+            <div class="calculator__right">
+                <div class="calculator__summary gradient">
+                    <div class="calculator__part calculator__calculations--uah">
+                        <div class="calculator__price"><span>0</span> UAH</div>
+                        <span class="calculator__description">Approximate total cost of work</span>
+                    </div>
+                    <div class="calculator__part calculator__calculations--usd">
+                        <div class="calculator__price"><span>0</span> $</div>
+                        <span class="calculator__description">Amount in US dollars at current exchange rate</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/bundle.js"></script>
 </body>
 </html>

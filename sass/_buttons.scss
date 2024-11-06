@@ -1,0 +1,18 @@
+.button {
+    padding: 12px 20px;
+    color: #fff;
+    font-size: 18px;
+    line-height: 21px;
+    border-radius: 4px;
+    background-color: $primary_color;
+    text-decoration: none;
+    border: 1px solid $primary_color;
+    transition: 0.2s background-color;
+
+    @media (min-width: 979px) {
+        &:hover {
+            background-color: $hover_color;
+            border: 1px solid $primary_color;
+        }
+    }
+}
