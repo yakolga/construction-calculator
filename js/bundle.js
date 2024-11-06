@@ -117,7 +117,7 @@ function logIn(formSelector, loginInputSelector, passwordInputSelector, messageC
         if (loginInput.value.length > 20) {
             let errorMessage = document.createElement('span');
             errorMessage.classList.add(messageClass.replace(/\./g, ''));
-            errorMessage.textContent = 'Поле логина не может содержать более 20 символов';
+            errorMessage.textContent = 'The login field cannot contain more than 20 characters';
             
             if (!document.querySelector(messageClass)) {
                 loginInput.closest('label').after(errorMessage);
@@ -133,8 +133,10 @@ function logIn(formSelector, loginInputSelector, passwordInputSelector, messageC
         e.preventDefault();
         (0,_services_services__WEBPACK_IMPORTED_MODULE_0__.getData)('https://construction-calculator.onrender.com/admin')
             .then(data => {
-                if (loginInput.value == data.login && passwordInput.value == data.password) {
+                if (loginInput.value == data[0].login && passwordInput.value == data[0].password) {
                     window.location = './admin.html';
+
+                    console.log('workss');
 
                     localStorage.setItem('logedIn', true);
                 } else {
@@ -143,7 +145,7 @@ function logIn(formSelector, loginInputSelector, passwordInputSelector, messageC
 
                     let errorMessage = document.createElement('span');
                     errorMessage.classList.add(messageClass.replace(/\./g, ''));
-                    errorMessage.textContent = 'Неверный логин или пароль';
+                    errorMessage.textContent = 'Incorrect login or password';
 
                     if (!document.querySelector(messageClass)) {
                         passwordInput.closest('label').after(errorMessage);
