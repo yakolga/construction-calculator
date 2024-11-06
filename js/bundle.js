@@ -134,7 +134,7 @@ function logIn(formSelector, loginInputSelector, passwordInputSelector, messageC
         (0,_services_services__WEBPACK_IMPORTED_MODULE_0__.getData)('https://construction-calculator.onrender.com/admin')
             .then(data => {
                 if (loginInput.value == data.login && passwordInput.value == data.password) {
-                    window.location = '/construction-calculator/admin.html';
+                    window.location = './admin.html';
 
                     localStorage.setItem('logedIn', true);
                 } else {
@@ -278,16 +278,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 function logedIn() {
     if (localStorage.getItem('logedIn') && window.location.href.includes('login')) {
-        window.location = '/construction-calculator/admin.html';
+        window.location = './admin.html';
     }
 
     if (!localStorage.getItem('logedIn') && window.location.href.includes('admin')) {
-        window.location = '/construction-calculator/login.html';
+        window.location = './login.html';
     }
 
     if (localStorage.getItem('logedIn')) {
         document.querySelectorAll('.calculator__log').forEach(btn => {
-            btn.href = '/construction-calculator/admin.html';
+            btn.href = './admin.html';
         });
     }
 
@@ -296,7 +296,7 @@ function logedIn() {
         logOutButton.addEventListener('click', (e) => {
             e.preventDefault();
             localStorage.removeItem('logedIn');
-            window.location = '/construction-calculator/index.html';
+            window.location = './index.html';
         });
     }
 }

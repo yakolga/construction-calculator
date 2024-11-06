@@ -29,7 +29,7 @@ function logIn(formSelector, loginInputSelector, passwordInputSelector, messageC
         getData('https://construction-calculator.onrender.com/admin')
             .then(data => {
                 if (loginInput.value == data.login && passwordInput.value == data.password) {
-                    window.location = '/construction-calculator/admin.html';
+                    window.location = './admin.html';
 
                     localStorage.setItem('logedIn', true);
                 } else {

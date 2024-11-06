@@ -1,15 +1,15 @@
 function logedIn() {
     if (localStorage.getItem('logedIn') && window.location.href.includes('login')) {
-        window.location = '/construction-calculator/admin.html';
+        window.location = './admin.html';
     }
 
     if (!localStorage.getItem('logedIn') && window.location.href.includes('admin')) {
-        window.location = '/construction-calculator/login.html';
+        window.location = './login.html';
     }
 
     if (localStorage.getItem('logedIn')) {
         document.querySelectorAll('.calculator__log').forEach(btn => {
-            btn.href = '/construction-calculator/admin.html';
+            btn.href = './admin.html';
         });
     }
 
@@ -18,7 +18,7 @@ function logedIn() {
         logOutButton.addEventListener('click', (e) => {
             e.preventDefault();
             localStorage.removeItem('logedIn');
-            window.location = '/construction-calculator/index.html';
+            window.location = './index.html';
         });
     }
 }
