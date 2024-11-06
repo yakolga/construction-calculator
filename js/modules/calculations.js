@@ -18,7 +18,7 @@ function calculator(parentSelector) {
             target.classList.remove('error');
         }
 
-        target.value = target.value.replace(/[^0-9]/, '');
+        target.value = target.value.replace(/[^0-9.]/g, '');
 
         function getSquares() {
             const allSquareInputs = document.querySelectorAll('.calculator__calculations--square .calculator__blocks input');
