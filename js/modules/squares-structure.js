@@ -27,9 +27,9 @@ function squaresStructure() {
         }
     }
 
-    getData("https://construction-calculator.onrender.com/squares")
+    getData("db.json")
         .then(data => {
-            data.forEach(({name, value, id}) => {
+            data['squares'].forEach(({name, value, id}) => {
                 new squaresElement(name, value, id, '.calculator__calculations--square .calculator__blocks').render();
             });
         });

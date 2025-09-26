@@ -80,9 +80,9 @@ function adminStructure() {
         }
     }
 
-    (0,_services_services__WEBPACK_IMPORTED_MODULE_0__.getData)('https://construction-calculator.onrender.com/operations')
+    (0,_services_services__WEBPACK_IMPORTED_MODULE_0__.getData)('db.json')
         .then(data => {
-            data.forEach(({name, count, unit, id}, i) => {
+            data['operations'].forEach(({name, count, unit, id}, i) => {
                 new worksElement(name, count, unit, id, i, '.calculator__calculations--admin .calculator__blocks').render();
             });
         });
@@ -131,12 +131,10 @@ function logIn(formSelector, loginInputSelector, passwordInputSelector, messageC
 
     form.addEventListener('submit', (e) => {
         e.preventDefault();
-        (0,_services_services__WEBPACK_IMPORTED_MODULE_0__.getData)('https://construction-calculator.onrender.com/admin')
+        (0,_services_services__WEBPACK_IMPORTED_MODULE_0__.getData)('db.json')
             .then(data => {
-                if (loginInput.value == data[0].login && passwordInput.value == data[0].password) {
+                if (loginInput.value == data['admin'][0].login && passwordInput.value == data['admin'][0].password) {
                     window.location = './admin.html';
-
-                    console.log('workss');
 
                     localStorage.setItem('logedIn', true);
                 } else {
@@ -347,9 +345,9 @@ function squaresStructure() {
         }
     }
 
-    (0,_services_services__WEBPACK_IMPORTED_MODULE_0__.getData)("https://construction-calculator.onrender.com/squares")
+    (0,_services_services__WEBPACK_IMPORTED_MODULE_0__.getData)("db.json")
         .then(data => {
-            data.forEach(({name, value, id}) => {
+            data['squares'].forEach(({name, value, id}) => {
                 new squaresElement(name, value, id, '.calculator__calculations--square .calculator__blocks').render();
             });
         });
@@ -446,9 +444,9 @@ function worksStructure() {
         }
     }
 
-    (0,_services_services__WEBPACK_IMPORTED_MODULE_0__.getData)('https://construction-calculator.onrender.com/operations')
+    (0,_services_services__WEBPACK_IMPORTED_MODULE_0__.getData)('db.json')
         .then(data => {
-            data.forEach(({name, count, unit, id}, i) => {
+            data['operations'].forEach(({name, count, unit, id}, i) => {
                 new worksElement(name, count, unit, id, i, '.calculator__calculations--works .calculator__blocks').render();
             });
         });
@@ -591,7 +589,7 @@ window.addEventListener('DOMContentLoaded', () => {
     (0,_modules_admin__WEBPACK_IMPORTED_MODULE_4__["default"])('.calculator__form', '#login', '#password', '.calculator__message', 'error');
     (0,_modules_logedIn__WEBPACK_IMPORTED_MODULE_5__["default"])();
     (0,_modules_admin_structure__WEBPACK_IMPORTED_MODULE_6__["default"])();
-    (0,_modules_admin_post__WEBPACK_IMPORTED_MODULE_7__["default"])('.calculator__calculations--admin .calculator__blocks', '.calculator__block', 'https://construction-calculator.onrender.com/operations');
+    (0,_modules_admin_post__WEBPACK_IMPORTED_MODULE_7__["default"])('.calculator__calculations--admin .calculator__blocks', '.calculator__block', 'db.json');
 });
 })();
 

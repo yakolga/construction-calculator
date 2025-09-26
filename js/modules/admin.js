@@ -26,12 +26,10 @@ function logIn(formSelector, loginInputSelector, passwordInputSelector, messageC
 
     form.addEventListener('submit', (e) => {
         e.preventDefault();
-        getData('https://construction-calculator.onrender.com/admin')
+        getData('db.json')
             .then(data => {
-                if (loginInput.value == data[0].login && passwordInput.value == data[0].password) {
+                if (loginInput.value == data['admin'][0].login && passwordInput.value == data['admin'][0].password) {
                     window.location = './admin.html';
-
-                    console.log('workss');
 
                     localStorage.setItem('logedIn', true);
                 } else {

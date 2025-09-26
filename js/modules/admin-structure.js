@@ -30,9 +30,9 @@ function adminStructure() {
         }
     }
 
-    getData('https://construction-calculator.onrender.com/operations')
+    getData('db.json')
         .then(data => {
-            data.forEach(({name, count, unit, id}, i) => {
+            data['operations'].forEach(({name, count, unit, id}, i) => {
                 new worksElement(name, count, unit, id, i, '.calculator__calculations--admin .calculator__blocks').render();
             });
         });
